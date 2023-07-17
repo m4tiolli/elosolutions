@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.index {
+  background-image: url("../../assets/bgindex.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#carouselEmpresas {
+  width: 100%;
+  height: 8vh;
+  background: linear-gradient(
+    270deg,
+    rgba(216, 37, 40, 0) 0%,
+    rgba(216, 37, 40, 0.5) 38.45%,
+    rgba(216, 37, 40, 0.6) 49.48%,
+    rgba(216, 37, 40, 0.5) 62.18%,
+    rgba(216, 37, 40, 0) 100%
+  );
+}
+
+.datacontainerindex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82vh;
+  width: 80%;
+  margin: auto;
+}
+.datacontainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82vh;
+  width: 80%;
+  margin: auto;
+}
+
+.robo {
+  height: 60vh;
+}
+
+.datacontainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.blue {
+  color: var(--blue);
+}
+.white {
+  color: #fff;
+}
+
+.desc {
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: xx-large;
+  width: 100%;
+}
+
+.text {
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: xx-large;
+  width: 70%;
+}
+
+.button {
+  background-color: var(--blue);
+  border: none;
+  width: 50%;
+  height: 6vh;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5vw;
+  font-size: x-large;
+  font-family: var(--bodyfont);
+  font-weight: 600;
+  margin: 5vh 0;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 2.5vw);
+  animation: pulse 1.5s infinite linear;
+  font-size: 5vw;
+  width: fit-content;
+}
+
+.down {
+  bottom: 0;
+}
+
+.up {
+  top: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: var(--blue);
+  font-family: var(--titlefont);
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
