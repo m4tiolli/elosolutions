@@ -37,9 +37,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  height: 82vh;
+  height: fit-content;
   width: 80%;
-  margin: auto;
+}
+
+.reverse {
+  flex-direction: row-reverse !important;
 }
 
 .robo {
@@ -67,17 +70,70 @@
   width: 100%;
 }
 
-.text {
+.textindex {
   font-family: var(--bodyfont);
   font-weight: 500;
   font-size: xx-large;
   width: 70%;
 }
+.text {
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: x-large;
+  width: 60%;
+}
+.text1 {
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: x-large;
+  width: 100%;
+}
+
+.image {
+  width: 40%;
+}
+
+.xsize {
+  width: 15% !important;
+}
+
+.inline {
+  flex-direction: row !important;
+}
+
+.industrias {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+.titleindustrias {
+  color: var(--blue);
+  font-family: var(--titlefont);
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.textindustrias {
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: medium;
+  width: 50%;
+}
+
+.flash {
+    color: var(--blue);
+    font-size: 10vw;
+
+}
 
 .button {
   background-color: var(--blue);
   border: none;
-  width: 50%;
+  width: 20vw;
   height: 6vh;
   color: #fff;
   cursor: pointer;
@@ -119,8 +175,58 @@
 .title {
   color: var(--blue);
   font-family: var(--titlefont);
-  font-weight: 500;
+  font-weight: 700;
   font-size: xx-large;
+  position: absolute;
+  top: 15vh;
+}
+
+.subtitle {
+  top: 30vh !important;
+}
+
+.descido {
+  margin-top: 15vh !important;
+}
+
+.svg {
+  position: absolute;
+  bottom: 0;
+
+  z-index: -1;
+}
+
+.textbutton {
+    width: 100% !important;
+    align-items: end !important;
+}
+
+
+.textbutton-reverse{
+    width: 100% !important;
+    align-items: start !important;
+}
+
+.svgright {
+    right: 0 !important;
+}
+
+.reversesvg {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: auto;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.align {
+    width: 70% !important;
 }
 
 @keyframes pulse {
