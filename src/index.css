@@ -1,16 +1,29 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
 :root {
   --bodyfont: "Poppins";
   --titlefont: "Chakra Petch";
   --blue: #101663;
   --red: #d82528;
+  scroll-behavior: smooth !important;
+  transition: 0.3s linear;
+}
+
+html,
+body,
+html:focus-within {
+  scroll-behavior: smooth !important;
+}
+
+::selection {
+  background-color: #fff;
+  color: var(--blue);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 li {

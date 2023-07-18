@@ -90,16 +90,19 @@
   height: 60vh;
 }
 
-
 .blue {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 .white {
-  color: #fff;
+  color: #fff !important;
 }
 
 .image {
   width: 40%;
+}
+
+.bgblue {
+  background-color: var(--blue) !important;
 }
 
 /* textos */
@@ -133,7 +136,7 @@
 }
 
 .xsize {
-  width: 15% !important;
+  width: 20% !important;
 }
 
 
@@ -181,6 +184,19 @@
   font-weight: 600;
   margin: 5vh 0;
 }
+.buttonblue {
+  background-color: #fff;
+  border: none;
+  width: 20vw;
+  height: 6vh;
+  color: var(--blue);
+  cursor: pointer;
+  border-radius: 5vw;
+  font-size: x-large;
+  font-family: var(--bodyfont);
+  font-weight: 600;
+  margin: 5vh 0;
+}
 
 .title {
   color: var(--blue);
@@ -202,7 +218,6 @@
 .svg {
   position: absolute;
   bottom: 0;
-
   z-index: -1;
 }
 
@@ -210,10 +225,17 @@
     right: 0 !important;
 }
 
+.svgleft {
+  left: 0 !important;
+}
+
 .reversesvg {
   transform: rotate(180deg) scaleX(-1);
 }
 
+.noscale {
+  transform: scaleX(0) !important;
+}
 
 
 /* setas */
