@@ -7,9 +7,9 @@ import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
 
-export default function Footer() {
+export default function Footer({ bgcolor, color }) {
   return (
-    <div className="footer bgwhite">
+    <div className="footer" style={{ backgroundColor: bgcolor, color: color }}>
       <div className="line1 fontline fontsize">
         <div className="phone">
           <BsFillTelephoneFill className="iconsize" />

@@ -27,6 +27,8 @@ import CarouselMini from "../../components/CarouselMini/CarouselMini";
 const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
+
+  const [color, setColor] = useState("#fff")
   useEffect(() => {
     AOS.init();
   }, []);
@@ -51,6 +53,7 @@ function Home() {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
+      isScrolled ? setColor("#101663") : setColor("#fff");
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -62,7 +65,7 @@ function Home() {
   return (
     <div>
       <div className="container index" id="index">
-        <Header scrolled={scrolled} />
+        <Header scrolled={scrolled} color={color} />
         <div id="carouselEmpresas">
           <CarouselMini />
         </div>
@@ -323,7 +326,7 @@ function Home() {
         <h2 className="title white">Empresas Parceiras</h2>
         <CarouselProducts />
       </div>
-      <Footer/>
+      <Footer bgcolor={'#FFF'} color={'#101663'} />
     </div>
   );
 }

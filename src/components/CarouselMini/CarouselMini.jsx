@@ -3,30 +3,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './CarouselMini.css';
 
-import colgate from '../../assets/colgate.png'
-import abb from '../../assets/abb.png'
-import bonfiglioli from '../../assets/bonfiglioli.png'
-import ambev from '../../assets/ambev.png'
-import siemens from '../../assets/siemens.png'
+import abb from '../../assets/abbw.png'
+import bonfiglioli from '../../assets/bonfiglioliw.png'
+import cincinnati from '../../assets/cincinnatiw.png'
+import gefran from '../../assets/gefranw.png'
+import hansa from '../../assets/hansaw.png'
+import markem from '../../assets/markemw.png'
+import schneider from '../../assets/schneiderw.png'
+import sesotec from '../../assets/sesotecw.png'
+import siemens from '../../assets/siemensw.png'
+import solcon from '../../assets/solconw.png'
+import synchrony from '../../assets/synchronyw.png'
 
 function CarouselMini() {
 
     const products = [
-        colgate,
         abb,
         bonfiglioli,
-        ambev,
+        cincinnati,
+        gefran,
+        hansa,
+        markem,
+        schneider,
+        sesotec,
         siemens,
-        colgate,
-        abb,
-        bonfiglioli,
-        ambev,
-        siemens,
-        colgate,
-        abb,
-        bonfiglioli,
-        ambev,
-        siemens,
+        solcon,
+        synchrony
     ]
 
     const settings = {

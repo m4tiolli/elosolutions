@@ -1,20 +1,173 @@
 #header {
-    width: 100%;
-    height: 10vh;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9999999 !important;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  height: 10vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 9999999 !important;
+  transition: background-color 0.3s ease;
 }
 
 #logoHeader {
-    height: 90%;
-    margin: 0 .5%;
+  height: 90%;
+  margin: 0 0.5%;
+  display: block;
 }
 
 .header-scroll {
-    background-color: rgba(16,22,99,1);
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 5px;
+}
+
+.li-blue {
+  color: var(--blue) !important;
+}
+
+li {
+  cursor: pointer;
+}
+
+/*Estilizando as listas */
+.menu ul {
+  list-style: none;
+  position: relative;
+}
+
+.menu ul ul {
+  position: absolute;
+  top: 3vh;
+  transform: translate(-25%, 0);
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 2vh;
+  width: 10vw;
+  padding-block: 2vh;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.menu ul li:hover ul {
+  visibility: visible;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+}
+
+.menu ul ul li {
+  font-size: medium;
+  color: var(--blue);
+}
+
+.menu ul ul li:not(:last-child)::after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  margin-top: 1vh;
+}
+
+/*Criando o label */
+.label {
+  padding: 5px;
+  color: #fff;
+  font-family: Arial;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  height: 50px;
+  margin: 10px auto;
+  display: none;
+}
+
+#bt_menu {
+  display: none;
+}
+
+.menuresponsivo ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 100px;
+}
+
+/*Deixando o Menu Responsivo */
+@media (max-width: 1000px) {
+  .label {
+    display: block;
+    right: 1vw;
+    position: absolute;
+    color: #fff;
+  }
+
+  #logoHeader {
+    margin: auto;
+  }
+  li {
+    display: none;
+  }
+
+  #bt_menu:checked ~ li {
+    width: 100vw;
+    height: fit-content;
+    padding-block: 2vh;
+    background-color: #fff;
+    display: block;
+  }
+
+  .menu {
+    margin-top: 5px;
+    margin-left: -100%;
+    transition: all 0.4s;
+    display: none;
+    width: 100%;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul li ul {
+    /* ... (existing styles) */
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    max-height: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .menu ul li {
+    width: 100%;
+    float: none;
+  }
+
+  .menu ul ul li {
+    /* ... (existing styles) */
+    font-size: medium;
+    color: var(--blue);
+  }
+
+  .menu ul ul li:not(:last-child)::after {
+    /* ... (existing styles) */
+    display: none;
+  }
+
+  .menu ul li:hover ul {
+    height: auto;
+    max-height: 200px;
+  }
 }
