@@ -1,0 +1,100 @@
+/*Containers*/
+.footer {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.line1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+
+.line1 .number {
+  display: flex;
+  flex-direction: column;
+}
+
+.line2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+
+/*Sub-Container*/
+.phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkedln {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/*Cor de fundo do rodapé*/
+.bgwhite {
+  background-color: #fff;
+  color: var(--blue);
+}
+
+.bgblue {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+/*Fontes*/
+
+.fontline {
+  font-family: var(--bodyfont);
+}
+
+.fontsize {
+  font-size: 10pt;
+}
+
+/*Icones*/
+
+.iconsize {
+  font-size: 17pt;
+}
+
+.linkedlnicon {
+  font-size: 35pt;
+}

@@ -8,8 +8,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  
 }
-
 
 .index {
   background-image: url("../../assets/bgindex.png");
@@ -28,6 +28,7 @@
     rgba(216, 37, 40, 0.5) 62.18%,
     rgba(216, 37, 40, 0) 100%
   );
+  margin-top: 10vh;
 }
 
 .datacontainerindex {
@@ -99,6 +100,7 @@
 
 .image {
   width: 40%;
+  z-index: 5 !important;
 }
 
 .bgblue {
@@ -112,6 +114,7 @@
   font-weight: 500;
   font-size: xx-large;
   width: 100%;
+  z-index: 1;
 }
 
 .textindex {
@@ -119,6 +122,7 @@
   font-weight: 500;
   font-size: xx-large;
   width: 70%;
+  z-index: 5 !important;
 }
 
 .text {
@@ -126,6 +130,7 @@
   font-weight: 500;
   font-size: x-large;
   width: 60%;
+  z-index: 5 !important;
 }
 
 .text1 {
@@ -133,6 +138,7 @@
   font-weight: 500;
   font-size: x-large;
   width: 100%;
+  z-index: 5 !important;
 }
 
 .xsize {
@@ -145,6 +151,7 @@
   font-family: var(--titlefont);
   font-weight: 700;
   font-size: xx-large;
+  z-index: 5 !important;
 }
 
 .textindustrias {
@@ -152,17 +159,20 @@
   font-weight: 500;
   font-size: medium;
   width: 50%;
+  z-index: 5 !important;
 }
 
 .textbutton {
   width: 100% !important;
   align-items: end !important;
+  z-index: 5 !important;
 }
 
 
 .textbutton-reverse{
   width: 100% !important;
   align-items: start !important;
+  z-index: 5 !important;
 }
 
 .flash {
@@ -183,6 +193,7 @@
   font-family: var(--bodyfont);
   font-weight: 600;
   margin: 5vh 0;
+  z-index: 5 !important;
 }
 .buttonblue {
   background-color: #fff;
@@ -196,6 +207,7 @@
   font-family: var(--bodyfont);
   font-weight: 600;
   margin: 5vh 0;
+  z-index: 5 !important;
 }
 
 .title {
@@ -205,10 +217,12 @@
   font-size: xx-large;
   position: absolute;
   top: 15vh;
+  z-index: 5 !important;
 }
 
 .subtitle {
   top: 30vh !important;
+  z-index: 5 !important;
 }
 
 .descido {
@@ -218,7 +232,7 @@
 .svg {
   position: absolute;
   bottom: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .svgright {

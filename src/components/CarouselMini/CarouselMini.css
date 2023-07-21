@@ -1,0 +1,19 @@
+.carouselmini {
+  width: 90%;
+  margin: auto;
+}
+
+.carouselmini:hover {
+  cursor: grab;
+}
+
+.divimageproductmini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+}
+
+.divimageproductmini img {
+  height: 5vh;
+}

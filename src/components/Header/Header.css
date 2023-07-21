@@ -4,10 +4,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 9999999 !important;
+    transition: background-color 0.3s ease;
 }
 
 #logoHeader {
-    height: 80%;
+    height: 90%;
     margin: 0 .5%;
+}
+
+.header-scroll {
+    background-color: rgba(16,22,99,1);
 }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { IoFlash } from "react-icons/io5";
 import AOS from "aos";
@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 
 //Importe de componentes
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 //Importe de Imagens
 import robo from "../../assets/robo.png";
@@ -21,15 +22,9 @@ import Painel from "../../assets/Painel.png";
 import Suporte from "../../assets/eletricista-manutencao-eletrica.png";
 
 //Carrossel
-import Carousel from "../../components/Carousel/Carousel";
-const images = [
-  IOT,
-  Inversor,
-  Baixa,
-  Painel,
-  index2,
-  index3
-];
+import CarouselProducts from "../../components/Carousel/Carousel";
+import CarouselMini from "../../components/CarouselMini/CarouselMini";
+const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
   useEffect(() => {
@@ -37,24 +32,41 @@ function Home() {
   }, []);
 
   function produtos() {
-    window.location.href = '#produtos'
+    window.location.href = "#produtos";
   }
   function servicos() {
-    window.location.href = '#servicos';
-
+    window.location.href = "#servicos";
   }
   function industrias() {
-    window.location.href = '#industrias';
-
+    window.location.href = "#industrias";
   }
 
+  function empresa() {
+    window.location.href = "#empresas";
+  }
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div>
       <div className="container index" id="index">
-        <Header />
-        <div id="carouselEmpresas"></div>
-        <div className="datacontainerindex" >
+        <Header scrolled={scrolled} />
+        <div id="carouselEmpresas">
+          <CarouselMini />
+        </div>
+        <div className="datacontainerindex">
           <div>
             <p className="textindex white" data-aos="fade-up">
               Potencialize seu projeto com a melhor empresa de locação de
@@ -64,11 +76,19 @@ function Home() {
           </div>
           <img src={robo} alt="" className="robo" />
         </div>
-        <BsChevronCompactDown className="arrow down" color="#fff" onClick={produtos} />
+        <BsChevronCompactDown
+          className="arrow down"
+          color="#fff"
+          onClick={produtos}
+        />
       </div>
       <div className="wrapper">
         <div className="container" id="produtos">
-          <BsChevronCompactUp className="arrow up" color="#101663" onClick={() => window.location.href = "#index"} />
+          <BsChevronCompactUp
+            className="arrow up"
+            color="#101663"
+            onClick={() => (window.location.href = "#index")}
+          />
           <h2 className="title">Produtos</h2>
           <div className="datacontainer descido">
             <h2 className="title subtitle">I.O.T</h2>
@@ -76,36 +96,51 @@ function Home() {
             <div className="textbutton">
               <div className="align">
                 <p className="text1 blue">
-                  Comercializamos um sistema completo de I.O.T, onde sua
-                  empresa poderá ter uma melhor visão de como está a vida útil
-                  de seu equipamento, como Compressores, Motores e
-                  equipamentos em geral.
+                  Comercializamos um sistema completo de I.O.T, onde sua empresa
+                  poderá ter uma melhor visão de como está a vida útil de seu
+                  equipamento, como Compressores, Motores e equipamentos em
+                  geral.
                 </p>
                 <button className="button">ver mais</button>
               </div>
             </div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 100 100" fill="none" className="svg svgleft">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 100 100"
+            fill="none"
+            className="svg svgleft"
+          >
             <path d="M711 900L0 0V900H711Z" fill="#D82528" />
           </svg>
         </div>
         <div className="container">
           <div className="datacontainer reverse">
-            <img src={Inversor} alt="Inversor de Frequência" className="image" />
+            <img
+              src={Inversor}
+              alt="Inversor de Frequência"
+              className="image"
+            />
             <h2 className="title">Inversor de Frequência e Conversores</h2>
             <div className="textbutton-reverse">
               <div className="align">
                 <p className="text1 blue">
-                  Somos revendedores certificados das principais fabricantes
-                  de inversores de frequência e conversores do mercado.
-                  Vendemos para qualquer tipo de aplicação sendo ela pesada ou
-                  leve.
+                  Somos revendedores certificados das principais fabricantes de
+                  inversores de frequência e conversores do mercado. Vendemos
+                  para qualquer tipo de aplicação sendo ela pesada ou leve.
                 </p>
                 <button className="button">ver mais</button>
               </div>
             </div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 100 100" fill="none" className="svg svgleft reversesvg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 100 100"
+            fill="none"
+            className="svg svgleft reversesvg"
+          >
             <path d="M711 900L0 0V900H711Z" fill="#D82528" />
           </svg>
         </div>
@@ -124,7 +159,11 @@ function Home() {
                 <div />
               </div>
             </div>
-            <BsChevronCompactDown className="arrow down" color="#101663" onClick={servicos} />
+            <BsChevronCompactDown
+              className="arrow down"
+              color="#101663"
+              onClick={servicos}
+            />
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +178,11 @@ function Home() {
       </div>
       <div className="wrapper">
         <div className="container bgblue" id="servicos">
-          <BsChevronCompactUp className="arrow up" color="#fff" onClick={produtos} />
+          <BsChevronCompactUp
+            className="arrow up"
+            color="#fff"
+            onClick={produtos}
+          />
           <h2 className="title white">Serviços</h2>
           <div className="datacontainer descido">
             <h2 className="title subtitle white">Montagem de Painéis</h2>
@@ -148,10 +191,9 @@ function Home() {
               <div className="align">
                 <p className="text1 white">
                   Fazemos a montagem de painél(eis) para qualquer linha de
-                  montagem independente da aplicação, entregamos além do
-                  painél elétrico montado, enviamos o esquema elétrico
-                  completo e caso seja necessário fazemos a programação do
-                  CLP.
+                  montagem independente da aplicação, entregamos além do painél
+                  elétrico montado, enviamos o esquema elétrico completo e caso
+                  seja necessário fazemos a programação do CLP.
                 </p>
                 <button className="buttonblue">ver mais</button>
               </div>
@@ -170,7 +212,12 @@ function Home() {
         <div className="container bgblue">
           <div className="datacontainer reverse">
             <h2 className="title white">Assistência e Suporte técnico</h2>
-            <img src={Suporte} alt="Assistencia técnica 24 Horas" className="image" style={{ borderRadius: 10 }} />
+            <img
+              src={Suporte}
+              alt="Assistencia técnica 24 Horas"
+              className="image"
+              style={{ borderRadius: 10 }}
+            />
             <div className="textbutton-reverse">
               <div className="align">
                 <p className="text1 white">
@@ -183,7 +230,13 @@ function Home() {
               </div>
             </div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 100 100" fill="none" className="svg svgleft">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 100 100"
+            fill="none"
+            className="svg svgleft"
+          >
             <path d="M711 900L0 0V900H711Z" fill="#D82528" />
           </svg>
         </div>
@@ -204,21 +257,35 @@ function Home() {
               </div>
             </div>
           </div>
-          <BsChevronCompactDown className="arrow down" color="#fff" onClick={industrias} />
-          <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 100 100" fill="none" className="svg svgleft reversesvg">
+          <BsChevronCompactDown
+            className="arrow down"
+            color="#fff"
+            onClick={industrias}
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 0 100 100"
+            fill="none"
+            className="svg svgleft reversesvg"
+          >
             <path d="M711 900L0 0V900H711Z" fill="#D82528" />
           </svg>
         </div>
       </div>
       <div className="container inline" id="industrias">
-        <BsChevronCompactUp className="arrow up" color="#101663" onClick={servicos} />
+        <BsChevronCompactUp
+          className="arrow up"
+          color="#101663"
+          onClick={servicos}
+        />
         <div className="industrias">
           <IoFlash className="flash" />
           <h2 className="titleindustrias blue">Indústria Metalúrgica</h2>
           <p className="textindustrias blue">
             A mais de 13 anos a Elo Solutions presta serviços oferecendo
-            soluções à seus clientes. Um bom exemplo foi em uma Usina de
-            Açúcar e Álcool localizada na região de Araçatuba...
+            soluções à seus clientes. Um bom exemplo foi em uma Usina de Açúcar
+            e Álcool localizada na região de Araçatuba...
           </p>
           <button className="button">ver mais</button>
         </div>
@@ -241,15 +308,22 @@ function Home() {
         >
           <path d="M0 900L714 0V900H0Z" fill="#D82528" />
         </svg>
-        <BsChevronCompactDown className="arrow down" color="#101663" />
+        <BsChevronCompactDown
+          className="arrow down"
+          color="#101663"
+          onClick={empresa}
+        />
       </div>
-      <div className="container bgblue">
-        <BsChevronCompactUp className="arrow up" color="#fff" onClick={industrias} />
+      <div className="container bgblue" id="empresas">
+        <BsChevronCompactUp
+          className="arrow up"
+          color="#fff"
+          onClick={industrias}
+        />
         <h2 className="title white">Empresas Parceiras</h2>
+        <CarouselProducts />
       </div>
-      <div>
-        <Carousel />
-      </div>
+      <Footer/>
     </div>
   );
 }
