@@ -28,6 +28,7 @@
 }
 
 /*Sub-Container*/
+
 .phone {
   display: flex;
   flex-direction: row;
@@ -97,4 +98,31 @@
 
 .linkedlnicon {
   font-size: 35pt;
+}
+
+@media only screen and (max-width: 800px) {
+  .line1,
+  .line2 {
+    display: block;
+  }
+  .footer {
+    gap: 0;
+    position: relative;
+  }
+  .fontsize {
+    font-size: 7pt;
+  }
+  .line2 {
+    position: absolute;
+    bottom: 3vh;
+  }
+  .line1 {
+    position: absolute;
+    top: 1vh;
+  }
+  .number {
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }

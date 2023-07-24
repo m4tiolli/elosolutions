@@ -14,6 +14,7 @@ import sesotec from '../../assets/sesotecw.png'
 import siemens from '../../assets/siemensw.png'
 import solcon from '../../assets/solconw.png'
 import synchrony from '../../assets/synchronyw.png'
+import { useEffect, useState } from 'react';
 
 function CarouselMini() {
 
@@ -31,11 +32,27 @@ function CarouselMini() {
         synchrony
     ]
 
+    const [responsive, setResponsive] = useState()
+
+    useEffect(() => {
+        const handleResize = () => {
+            setResponsive(window.innerWidth < 800);
+        };
+
+        handleResize(); // Set initial state
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     const settings = {
         dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 6,
+        slidesToShow: responsive ? 3 : 6,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,

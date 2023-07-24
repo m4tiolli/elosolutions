@@ -9,6 +9,7 @@ import abb from '../../assets/abb.png'
 import bonfiglioli from '../../assets/bonfiglioli.png'
 import ambev from '../../assets/ambev.png'
 import siemens from '../../assets/siemens.png'
+import { useState, useEffect } from 'react';
 
 function CarouselProducts() {
     const products = [
@@ -33,17 +34,33 @@ function CarouselProducts() {
                 'https://www.ppdistributors.com/cdn/shop/collections/Bonfiglioli-logo.jpg?v=1636644081',
         },
     ];
+    const [responsive, setResponsive] = useState()
+
+    useEffect(() => {
+        const handleResize = () => {
+            setResponsive(window.innerWidth < 800);
+        };
+
+        handleResize(); // Set initial state
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 3,
+        slidesToShow: responsive ? 2 : 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         arrows: false,
     };
+
     return (
         <div className="carousel">
             <Slider {...settings}>

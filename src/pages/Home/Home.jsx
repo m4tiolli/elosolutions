@@ -29,6 +29,7 @@ const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 function Home() {
 
   const [color, setColor] = useState("#fff")
+  const [bgcolor, setBgcolor] = useState("#101663")
   useEffect(() => {
     AOS.init();
   }, []);
@@ -54,6 +55,7 @@ function Home() {
       const isScrolled = window.scrollY > 100;
       setScrolled(isScrolled);
       isScrolled ? setColor("#101663") : setColor("#fff");
+      isScrolled ? setBgcolor("#fff") : setBgcolor("#101663");
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -65,7 +67,7 @@ function Home() {
   return (
     <div>
       <div className="container index" id="index">
-        <Header scrolled={scrolled} color={color} />
+        <Header scrolled={scrolled} color={color} bgcolor={bgcolor} />
         <div id="carouselEmpresas">
           <CarouselMini />
         </div>
@@ -94,7 +96,7 @@ function Home() {
           />
           <h2 className="title">Produtos</h2>
           <div className="datacontainer descido">
-            <h2 className="title subtitle">I.O.T</h2>
+            <h2 className="subtitle">I.O.T</h2>
             <img src={IOT} alt="IOT" className="image" />
             <div className="textbutton">
               <div className="align">
@@ -317,7 +319,7 @@ function Home() {
           onClick={empresa}
         />
       </div>
-      <div className="container bgblue" id="empresas">
+      <div className="container bgblue lightheight" id="empresas">
         <BsChevronCompactUp
           className="arrow up"
           color="#fff"

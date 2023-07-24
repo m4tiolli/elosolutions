@@ -78,15 +78,14 @@ li {
 
 /*Criando o label */
 .label {
-  padding: 5px;
   color: #fff;
-  font-family: Arial;
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
   cursor: pointer;
-  height: 50px;
-  margin: 10px auto;
   display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
 }
 
 #bt_menu {
@@ -101,73 +100,70 @@ li {
   top: 100px;
 }
 
-/*Deixando o Menu Responsivo */
-@media (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  .sidebaropen {
+    position: relative;
+  }
   .label {
     display: block;
-    right: 1vw;
-    position: absolute;
-    color: #fff;
+    z-index: 999 !important;
   }
 
-  #logoHeader {
-    margin: auto;
-  }
-  li {
+  .sidebarclosed ul,
+  .sidebarclosed ul ul,
+  .sidebarclosed li {
     display: none;
   }
 
-  #bt_menu:checked ~ li {
-    width: 100vw;
-    height: fit-content;
-    padding-block: 2vh;
-    background-color: #fff;
+  .sidebaropen ul,
+  .sidebaropen li {
     display: block;
   }
 
-  .menu {
-    margin-top: 5px;
-    margin-left: -100%;
-    transition: all 0.4s;
+  .sidebarclosed ul li ul {
     display: none;
-    width: 100%;
   }
 
-  .menu ul {
+  .sidebaropen > ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10vh;
+    gap: 1rem;
   }
 
-  .menu ul li ul {
-    /* ... (existing styles) */
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    max-height: none;
-    box-shadow: none;
-    padding: 0;
-    width: auto;
+  .sidebaropen ul ul {
+    position: relative !important;
+    top: 0;
+    list-style: circle left !important;
   }
 
-  .menu ul li {
-    width: 100%;
-    float: none;
+  .sidebaropen ul li {
+    font-size: 18pt;
   }
 
-  .menu ul ul li {
-    /* ... (existing styles) */
-    font-size: medium;
-    color: var(--blue);
+  .sidebaropen ul li ul li {
+    font-size: 10pt;
+    margin-block: 0.4rem;
   }
 
-  .menu ul ul li:not(:last-child)::after {
-    /* ... (existing styles) */
-    display: none;
+  .sidebaropen ul li ul {
+    margin-block: 1rem;
+    gap: 2rem;
+    padding-block: 2vh;
+    transition: background-color 0.3s ease-in;
+  }
+  .block {
+    display: block !important;
   }
 
-  .menu ul li:hover ul {
-    height: auto;
-    max-height: 200px;
+  .none {
+    display: none !important;
   }
 }

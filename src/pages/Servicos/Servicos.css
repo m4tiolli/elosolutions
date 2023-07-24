@@ -1,0 +1,136 @@
+/*
+*   Containers
+*/
+
+.Banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Banner img {
+  width: 40%;
+}
+
+.Banner .TituloBanner {
+  display: flex;
+  width: 30%;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+  text-align: right;
+}
+
+.Banner .TituloBanner button {
+  background-color: var(--blue);
+  border: none;
+  width: 20vw;
+  height: 6vh;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5vw;
+  font-size: x-large;
+  font-family: var(--bodyfont);
+  font-weight: 600;
+  margin: 5vh 0;
+  z-index: 5 !important;
+}
+
+.SobreProduto1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.SobreProduto1 img {
+  width: 20%;
+}
+
+.SobreProduto1 p {
+  width: 50%;
+  font-weight: 500;
+}
+
+.SobreProduto2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.SobreProduto2 p {
+  width: 40%;
+  font-weight: 500;
+}
+
+.CarouselEmpresas {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*
+  *    Textos
+  */
+
+/*Cores*/
+.text-blue {
+  color: var(--blue);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-red {
+  color: var(--red);
+}
+
+/*Fontes*/
+.font-title {
+  font-family: var(--titlefont);
+}
+
+.font-body {
+  font-family: var(--bodyfont);
+}
+
+/*Posições*/
+.text-title {
+  font-size: 1.8rem;
+}
+
+.text-body {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+/*
+  *   Fundo
+  */
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-red {
+  background-color: var(--red);
+}
