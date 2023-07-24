@@ -17,3 +17,9 @@
 .divimageproductmini img {
   height: 13vh;
 }
+
+@media only screen and (max-width: 800px) {
+  .divimageproductmini img {
+    height: 10vh;
+  }
+}

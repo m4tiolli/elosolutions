@@ -8,7 +8,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .index {
@@ -54,8 +53,14 @@
 .datacontainer div {
   display: flex;
   flex-direction: column;
+}
+.datacontainerindex div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  height: 60vh;
 }
 
 .industrias {
@@ -82,7 +87,7 @@
 }
 
 .align {
-    width: 70% !important;
+  width: 70% !important;
 }
 
 /* imagens e cores */
@@ -120,7 +125,7 @@
 .textindex {
   font-family: var(--bodyfont);
   font-weight: 500;
-  font-size: xx-large;
+  font-size: 1.5rem;
   width: 70%;
   z-index: 5 !important;
 }
@@ -145,7 +150,6 @@
   width: 20% !important;
 }
 
-
 .titleindustrias {
   color: var(--blue);
   font-family: var(--titlefont);
@@ -164,21 +168,20 @@
 
 .textbutton {
   width: 100% !important;
-  align-items: end !important;
+  align-items: end;
   z-index: 5 !important;
 }
 
-
-.textbutton-reverse{
-  width: 100% !important;
-  align-items: start !important;
+.textbutton-reverse {
+  width: 100%;
+  align-items: start;
   z-index: 5 !important;
 }
 
 .flash {
-    color: var(--blue);
-    font-size: 10vw;
-
+  color: var(--blue);
+  font-size: 10vw;
+  z-index: 999999 !important;
 }
 
 .button {
@@ -221,8 +224,13 @@
 }
 
 .subtitle {
-  top: 30vh !important;
+  top: 30vh;
   z-index: 5 !important;
+  color: var(--blue);
+  font-family: var(--titlefont);
+  font-weight: 700;
+  font-size: xx-large;
+  position: absolute;
 }
 
 .descido {
@@ -236,7 +244,7 @@
 }
 
 .svgright {
-    right: 0 !important;
+  right: 0 !important;
 }
 
 .svgleft {
@@ -250,7 +258,6 @@
 .noscale {
   transform: scaleX(0) !important;
 }
-
 
 /* setas */
 
@@ -267,13 +274,14 @@
 }
 
 .arrow {
-  cursor: pointer;
+  cursor: pointer !important;
   position: absolute;
   bottom: 0;
   left: calc(50% - 2.5vw);
   animation: pulse 1.5s infinite linear;
   font-size: 5vw;
   width: fit-content;
+  z-index: 99999 !important;
 }
 
 .down {
@@ -282,4 +290,89 @@
 
 .up {
   top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .datacontainerindex {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .textindex {
+    font-size: x-large;
+    width: 90%;
+    margin: auto;
+  }
+  .button,
+  .buttonblue {
+    width: 80%;
+    margin: 0;
+  }
+
+  .robo {
+    display: none;
+  }
+  .arrow {
+    font-size: 5em !important;
+    left: calc(50% - 0.4em) !important;
+  }
+  .title {
+    top: 13vh;
+    text-align: center;
+  }
+  .subtitle {
+    top: 20vh !important;
+  }
+  .text1 {
+    font-size: 1.2rem;
+  }
+  .datacontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center !important;
+  }
+  .image {
+    width: 60%;
+  }
+  .align {
+    width: 80% !important;
+    text-align: center;
+    align-items: center;
+    gap: 3vh;
+  }
+  .textbutton {
+    align-items: center;
+  }
+  .textbutton-reverse {
+    align-items: center;
+    width: 100%;
+  }
+  .reverse {
+    flex-direction: column !important;
+  }
+  .inline {
+    flex-direction: column !important;
+  }
+  .industrias {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .industrias:first-of-type {
+    margin-top: 13vh !important;
+  }
+  .titleindustrias {
+    text-align: center;
+    font-size: 1.6em;
+  }
+  .textindustrias {
+    width: 90%;
+  }
+  .flash {
+    display: none;
+  }
+  .lightheight {
+    height: 70vh !important;
+  }
 }
