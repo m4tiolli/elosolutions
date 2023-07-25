@@ -159,8 +159,7 @@ function Home() {
               <div className="align">
                 <p className="text1 blue">
                   Vendemos Equipamentos de baixa tensão, como Inversores de
-                  Frequência, CLP (Controladores Lógicos Programáveis),
-                  Disjuntores-Motores, Relés e entre outros equipamentos.
+                  Frequência, Disjuntores-Motores, Relés e entre outros equipamentos.
                 </p>
                 <button className="button">ver mais</button>
                 <div />
@@ -199,7 +198,7 @@ function Home() {
             <div className="textbutton">
               <div className="align">
                 <p className="text1 white">
-                  Fazemos a montagem de painél(eis) para qualquer linha de
+                  Fazemos a montagem de painél para qualquer linha de
                   montagem independente da aplicação, entregamos além do painél
                   elétrico montado, enviamos o esquema elétrico completo e caso
                   seja necessário fazemos a programação do CLP.
