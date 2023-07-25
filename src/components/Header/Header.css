@@ -25,6 +25,10 @@
   color: var(--blue) !important;
 }
 
+.li-white {
+  color: #fff !important;
+}
+
 li {
   cursor: pointer;
 }
@@ -37,12 +41,12 @@ li {
 
 .menu ul ul {
   position: absolute;
-  top: 3vh;
+  top: 6vh;
   transform: translate(-25%, 0);
   visibility: hidden;
   opacity: 0;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 3px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -52,6 +56,16 @@ li {
   width: 10vw;
   padding-block: 2vh;
   border-radius: 0px 0px 5px 5px;
+}
+
+.menu ul ul::before {
+  content: " ";
+  height: 4vh;
+  display: block;
+  width: 100%;
+  background-color: transparent !important;
+  position: absolute;
+  top: -4vh;
 }
 
 .menu ul li:hover ul {
@@ -78,7 +92,6 @@ li {
 
 /*Criando o label */
 .label {
-  color: #fff;
   text-align: center;
   font-size: 3rem;
   cursor: pointer;

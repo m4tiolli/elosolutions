@@ -8,6 +8,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden !important;
 }
 
 .index {
@@ -275,13 +276,19 @@
 
 .arrow {
   cursor: pointer !important;
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 2.5vw);
   animation: pulse 1.5s infinite linear;
   font-size: 5vw;
-  width: fit-content;
-  z-index: 99999 !important;
+  position: absolute;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  height: fit-content;
 }
 
 .down {
@@ -313,8 +320,7 @@
     display: none;
   }
   .arrow {
-    font-size: 5em !important;
-    left: calc(50% - 0.4em) !important;
+    font-size: 3rem !important;
   }
   .title {
     top: 13vh;

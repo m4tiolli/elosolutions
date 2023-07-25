@@ -14,7 +14,7 @@ import image3 from "../../assets/image_31.png";
 //Importação de estilização
 import "./Produtos.css";
 
-export default function Produtos({ title, desc1, desc2, desc3 }) {
+export default function Produtos() {
     //Script de Scroll de tela
     const [scrolled, setScrolled] = useState(false);
 
@@ -39,23 +39,31 @@ export default function Produtos({ title, desc1, desc2, desc3 }) {
             <div className="Banner bg-white text-blue">
                 <img src={image1} alt="Imagem Banner Produtos" />
                 <div className="TituloBanner">
-                    <h1 className="font-title">{title}</h1>
+                    <h1 className="font-title">Inversor de Frequência</h1>
                     <p className="font-body">
-                        {desc1}
+                        A Elo Solutions é reevendedor oficial das melhores marcas de
+                        inversores de frequência do mercado industrial. Trabalhamos com
+                        inversores para quaisquer tipo de aplicação.
                     </p>
                     <button>Ver mais</button>
                 </div>
             </div>
-            <div className="SobreProduto1 bg-white text-blue">
+            <div className="SobreProduto bg-white text-blue">
                 <p className="font-body text-body">
-                    {desc2}
+                    Os inversores de frequência são equipamentos elétricos que realizam a
+                    variação da velocidade de algum equipamento ligado nele, por exemplo
+                    um motor elétrico em uma aplicação de compressores. A Elo Solutions
+                    disponibliza quaisquer inversor de frequência para atender a sua
+                    necessidade.
                 </p>
                 <img src={image2} alt="Imagem do Produtos" />
             </div>
             <div className="SobreProduto2 bg-blue text-white">
                 <img src={image3} alt="Imagem do Produtos" />
                 <p className="font-body">
-                    {desc3}
+                    As empresas parceiras, nos fornecem inversores de todos os modelos
+                    disponíveis. Além disso, nossa equipe técnica lhe dará todo o suporte
+                    técnico necessário sendo ele remoto ou local.
                 </p>
             </div>
             <div className="CarouselEmpresas bg-blue text-white">

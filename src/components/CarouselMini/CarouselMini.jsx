@@ -18,19 +18,20 @@ import { useEffect, useState } from 'react';
 
 function CarouselMini() {
 
-    const products = [
-        abb,
-        bonfiglioli,
-        cincinnati,
-        gefran,
-        hansa,
-        markem,
-        schneider,
-        sesotec,
-        siemens,
-        solcon,
-        synchrony
-    ]
+    //Imagens vindas do banco de dados
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('https://localhost:7231/api/Clientes', {
+            method: 'GET',
+        })
+            .then((response) => response.json())
+            .then((json) => setProducts(json))
+            .catch((err) => {
+                console.log(err);
+                alert('Erro ao pegar Clientes');
+            })
+    }, []);
 
     const [responsive, setResponsive] = useState()
 
@@ -64,7 +65,7 @@ function CarouselMini() {
                 {products.map((product, index) => (
                     <div key={index}>
                         <div className="divimageproductmini">
-                            <img src={product} alt="" />
+                            <img src={product?.imagem} alt="" />
                         </div>
                     </div>
                 ))}

@@ -41,7 +41,7 @@
   z-index: 5 !important;
 }
 
-.SobreProduto1 {
+.SobreProduto {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -50,26 +50,12 @@
   align-items: center;
 }
 
-.SobreProduto1 img {
-  width: 20%;
+.SobreProduto img {
+  width: 30%;
 }
 
-.SobreProduto1 p {
+.SobreProduto p {
   width: 50%;
-  font-weight: 500;
-}
-
-.SobreProduto2 {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.SobreProduto2 p {
-  width: 40%;
   font-weight: 500;
 }
 

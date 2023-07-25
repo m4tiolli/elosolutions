@@ -14,12 +14,14 @@ export default function Contato() {
     const [scrolled, setScrolled] = useState(false);
 
     const [color, setColor] = useState("#fff");
+    const [bgcolor, setBgcolor] = useState("#101663")
 
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 100;
             setScrolled(isScrolled);
             isScrolled ? setColor("#101663") : setColor("#fff");
+            isScrolled ? setBgcolor("#fff") : setBgcolor("#101663");
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -30,10 +32,10 @@ export default function Contato() {
 
     return (
         <div>
-            <Header scrolled={scrolled} color="#101663" />
+            <Header scrolled={scrolled} color={color} bgcolor={bgcolor} />
             <div className="Banner text-blue">
-                <h1 className="texto-titulo">Endereço</h1>
-                <h2 className="texto-conteudo">
+                <h1 className="texto-titulo t20">Endereço</h1>
+                <h2 className="texto-conteudo w100">
                     Rua Iguaçu, 38 - Vila São Silvestre - Barueri - SP <br />
                     Cep: 06417-140 <br />
                     Telefone: 11 4154.4414
@@ -45,8 +47,9 @@ export default function Contato() {
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="MAPA ASDKLJAHASD"
+                    title="Localização EloSolutions"
                     style={{ border: 0, borderRadius: 10 }}
+                    className="mapa"
                 ></iframe>
             </div>
             <div className="Conteudo bg-blue text-white">

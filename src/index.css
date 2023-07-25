@@ -33,3 +33,8 @@ li {
   font-weight: 600;
   color: #fff;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -45,13 +45,14 @@ export default function Empresa() {
     //Script de Scroll de tela
     const [scrolled, setScrolled] = useState(false);
 
-    const [color, setColor] = useState("#fff");
+    const [color, setColor] = useState("#101663");
+    const [bgcolor, setBgcolor] = useState("#fff")
 
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 100;
             setScrolled(isScrolled);
-            isScrolled ? setColor("#101663") : setColor("#fff");
+            isScrolled ? setBgcolor("#101663") : setBgcolor("#fff");
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -59,9 +60,10 @@ export default function Empresa() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
     return (
         <div>
-            <Header scrolled={scrolled} color="#101663" />
+            <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={"#101661"} />
             <div className="HeaderBanner" id="index">
                 <div className="infoBanner text-blue textoBanner">
                     <img src={image1} alt="" />

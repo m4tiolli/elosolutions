@@ -1,21 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./Header.css";
 import { useState, useEffect } from "react";
 import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 
 
-function Header({ scrolled, color, bgcolor }) {
+function Header({ scrolled, color, bgcolor, burger }) {
 
     const navigate = useNavigate();
 
-    function navIot() {
-        navigate('produtos/iot');
-    }
-
-    function navInversor() {
-        navigate('produtos/inversor');
-    }
     const [responsive, setResponsive] = useState(false);
 
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -54,29 +47,29 @@ function Header({ scrolled, color, bgcolor }) {
 
     return (
         <div id="header" className={scrolled ? "header-scroll" : ""}>
-            <img src={logo} alt="" id="logoHeader" />
+            <img src={logo} alt="Elo Solutions" id="logoHeader" />
             <input type="checkbox" id="bt_menu" />
-            {!sidebarOpen ? <RxHamburgerMenu htmlFor="bt_menu" className="label" onClick={toggleSideBar} color={color} /> : <RxCross2 htmlFor="bt_menu" className="label" onClick={toggleSideBar} color={color} />}
+            {!sidebarOpen ? <RxHamburgerMenu htmlFor="bt_menu" className="label" onClick={toggleSideBar} color={burger} /> : <RxCross2 htmlFor="bt_menu" className="label" onClick={toggleSideBar} color={color} />}
             <div className={`${sidebarOpen ? 'sidebaropen' : ''} ${responsive ? 'menuresponsivo' : 'menu'}`}>
                 <ul style={{ backgroundColor: responsive ? bgcolor : 'transparent' }}>
-                    <li onClick={() => navigate("/")} style={{ color: color }}>Home</li>
+                    <li style={{ color: color }} ><Link to={"/"}>Home</Link></li>
                     <li style={{ color: color }} onClick={() => toggleopen1()}>
                         Produtos
                         <ul className={open1 ? 'block' : 'none'} style={responsive ? { backgroundColor: newbgcolor } : {}}>
-                            <li style={responsive ? { color: color } : {}} onClick={navIot}>I.O.T</li>
-                            <li style={responsive ? { color: color } : {}} onClick={navInversor}>Inversor de Frequência</li>
+                            <li style={responsive ? { color: color } : {}}><Link to={"/produtos/iot"}>I.O.T</Link></li>
+                            <li style={responsive ? { color: color } : {}}><Link to={"/produtos/inversor"}>Inversor de Frequência</Link></li>
                         </ul>
                     </li>
                     <li style={{ color: color }} onClick={() => toggleopen2()}>
                         Serviços
                         <ul className={open2 ? 'block' : 'none'} style={responsive ? { backgroundColor: newbgcolor } : {}}>
-                            <li style={responsive ? { color: color } : {}}>Locação de Equipamentos</li>
-                            <li style={responsive ? { color: color } : {}}>Assistência Técnica</li>
-                            <li style={responsive ? { color: color } : {}}>Montagem de Painéis</li>
+                            <li style={responsive ? { color: color } : {}}><Link to={"/servicos/locacao-equipamento"}>Locação de Equipamentos</Link></li>
+                            <li style={responsive ? { color: color } : {}}><Link to={"/servicos/assistencia-tecnica"}>Assistência Técnica</Link></li>
+                            <li style={responsive ? { color: color } : {}}><Link to={"/servicos/montagem-painel"}>Montagem de Painéis</Link></li>
                         </ul>
                     </li>
-                    <li onClick={() => navigate("/empresa")} style={{ color: color }}>Empresa</li>
-                    <li onClick={() => navigate("/contato")} style={{ color: color }}>Contato</li>
+                    <li style={{ color: color }}><Link to={"/empresa"}>Empresa</Link></li>
+                    <li style={{ color: color }}><Link to={"/contato"}>Contato</Link></li>
                 </ul>
             </div>
         </div >

@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: row;
 }
 
 .HeaderBanner .infoBanner p {
@@ -168,22 +169,51 @@
   background-color: var(--red);
 }
 
-/*Arrow*/
-
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 2.5vw);
-  animation: pulse 1.5s infinite linear;
-  font-size: 5vw;
-  width: fit-content;
-}
-
-.down {
-  bottom: 0;
-}
-
-.up {
-  top: 0;
+@media only screen and (max-width: 800px) {
+  .infoBanner,
+  .conteudoExcelencia,
+  .conteudoValores {
+    justify-content: space-evenly !important;
+    flex-direction: column !important;
+    height: 80%;
+  }
+  .infoBanner img {
+    width: 60%;
+  }
+  .infoBanner p {
+    width: 90% !important;
+    text-align: center;
+  }
+  .QuemSomosBody {
+    position: relative;
+  }
+  .texto-titulo {
+    position: absolute;
+    top: 5vh;
+  }
+  .texto-conteudo {
+    font-size: 1.3rem !important;
+    width: 120%;
+  }
+  .texto {
+    width: 90%;
+  }
+  .conteudoExcelencia img,
+  .conteudoValores img {
+    width: 70% !important;
+  }
+  .conteudoFundador {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .Fundador1,
+  .Fundador2 {
+    position: relative;
+    height: 40vh;
+  }
+  .Fundador1 img,
+  .Fundador2 img {
+    width: 50%;
+    padding-top: 10vh;
+  }
 }

@@ -67,7 +67,7 @@ function Home() {
   return (
     <div>
       <div className="container index" id="index">
-        <Header scrolled={scrolled} color={color} bgcolor={bgcolor} />
+        <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={"#fff"} />
         <div id="carouselEmpresas">
           <CarouselMini />
         </div>
@@ -81,11 +81,13 @@ function Home() {
           </div>
           <img src={robo} alt="" className="robo" />
         </div>
-        <BsChevronCompactDown
-          className="arrow down"
-          color="#fff"
-          onClick={produtos}
-        />
+        <div className="center">
+          <BsChevronCompactDown
+            className="arrow down"
+            color="#fff"
+            onClick={produtos}
+          />
+        </div>
       </div>
       <div className="wrapper">
         <div className="container" id="produtos">
@@ -164,6 +166,8 @@ function Home() {
                 <div />
               </div>
             </div>
+          </div>
+          <div className="center">
             <BsChevronCompactDown
               className="arrow down"
               color="#101663"
@@ -304,6 +308,13 @@ function Home() {
           </p>
           <button className="button">ver mais</button>
         </div>
+        <div className="center" >
+          <BsChevronCompactDown
+            className="arrow down"
+            color="#101663"
+            onClick={empresa}
+          />
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="100%"
@@ -313,11 +324,6 @@ function Home() {
         >
           <path d="M0 900L714 0V900H0Z" fill="#D82528" />
         </svg>
-        <BsChevronCompactDown
-          className="arrow down"
-          color="#101663"
-          onClick={empresa}
-        />
       </div>
       <div className="container bgblue lightheight" id="empresas">
         <BsChevronCompactUp
