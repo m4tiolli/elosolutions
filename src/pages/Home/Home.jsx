@@ -24,9 +24,12 @@ import Suporte from "../../assets/eletricista-manutencao-eletrica.png";
 //Carrossel
 import CarouselProducts from "../../components/Carousel/Carousel";
 import CarouselMini from "../../components/CarouselMini/CarouselMini";
+import { Link, useNavigate } from "react-router-dom";
 const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
+
+  const navigate = useNavigate();
 
   const [color, setColor] = useState("#fff")
   const [bgcolor, setBgcolor] = useState("#101663")
@@ -41,7 +44,7 @@ function Home() {
     window.location.href = "#servicos";
   }
   function industrias() {
-    window.location.href = "#industrias";
+    window.location.href = "#casos-de-sucesso";
   }
 
   function empresa() {
@@ -74,10 +77,10 @@ function Home() {
         <div className="datacontainerindex">
           <div>
             <p className="textindex white" data-aos="fade-up">
-              Potencialize seu projeto com a melhor empresa de locação de
-              equipamentos, assistência técnica 24 horas e montagem de painéis!
+              Potencialize seu Projeto com a Elo Solutions, conheça nossas soluções, produtos e srviços que oferecemos.
+              Caso queira mais clique no botão abaixo!
             </p>
-            <button className="button">ver mais</button>
+            <button className="button" onClick={() => navigate('/contato')}>ver mais</button>
           </div>
           <img src={robo} alt="" className="robo" />
         </div>
@@ -108,7 +111,7 @@ function Home() {
                   equipamento, como Compressores, Motores e equipamentos em
                   geral.
                 </p>
-                <button className="button">ver mais</button>
+                <button className="button" onClick={() => navigate('/produtos/iot')}>ver mais</button>
               </div>
             </div>
           </div>
@@ -137,7 +140,7 @@ function Home() {
                   inversores de frequência e conversores do mercado. Vendemos
                   para qualquer tipo de aplicação sendo ela pesada ou leve.
                 </p>
-                <button className="button">ver mais</button>
+                <button className="button" onClick={() => navigate('/produtos/inversor')}>ver mais</button>
               </div>
             </div>
           </div>
@@ -203,7 +206,7 @@ function Home() {
                   elétrico montado, enviamos o esquema elétrico completo e caso
                   seja necessário fazemos a programação do CLP.
                 </p>
-                <button className="buttonblue">ver mais</button>
+                <button className="buttonblue" onClick={() => navigate('/servicos/montagem-painel')}>ver mais</button>
               </div>
             </div>
           </div>
@@ -234,7 +237,7 @@ function Home() {
                   de assistência em seus equipamentos e também suporte Local
                   e/ou Remoto.
                 </p>
-                <button className="buttonblue">ver mais</button>
+                <button className="buttonblue" onClick={() => navigate('/servicos/assistencia-tecnica')}>ver mais</button>
               </div>
             </div>
           </div>
@@ -261,7 +264,7 @@ function Home() {
                   capacitado, disponibilizamos um técnico que fará toda a
                   instalação e parametrização do mesmo.
                 </p>
-                <button className="buttonblue">ver mais</button>
+                <button className="buttonblue" onClick={() => navigate('/servicos/locacao-equipamento')}>ver mais</button>
               </div>
             </div>
           </div>
@@ -281,7 +284,7 @@ function Home() {
           </svg>
         </div>
       </div>
-      <div className="container inline" id="industrias">
+      <div className="container inline" id="casos-de-sucesso">
         <BsChevronCompactUp
           className="arrow up"
           color="#101663"
@@ -289,23 +292,21 @@ function Home() {
         />
         <div className="industrias">
           <IoFlash className="flash" />
-          <h2 className="titleindustrias blue">Indústria Metalúrgica</h2>
+          <h2 className="titleindustrias blue">Indústria Sucroalcooleira</h2>
           <p className="textindustrias blue">
             A mais de 13 anos a Elo Solutions presta serviços oferecendo
             soluções à seus clientes. Um bom exemplo foi em uma Usina de Açúcar
             e Álcool localizada na região de Araçatuba...
           </p>
-          <button className="button">ver mais</button>
         </div>
         <div className="industrias">
           <IoFlash className="flash" />
-          <h2 className="titleindustrias blue">Indústria Sucroalcooleira</h2>
+          <h2 className="titleindustrias blue">Indústria Metalúrgica</h2>
           <p className="textindustrias blue">
             A Elo Solutions também está presente na indústria metalúrgica,
             sempre pensando nas soluções mais adequadas aos processos de seus
             clientes...
           </p>
-          <button className="button">ver mais</button>
         </div>
         <div className="center" >
           <BsChevronCompactDown
