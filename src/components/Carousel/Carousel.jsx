@@ -4,11 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 
 //Importação de componentes
-import colgate from '../../assets/colgate.png'
-import abb from '../../assets/abb.png'
-import bonfiglioli from '../../assets/bonfiglioli.png'
-import ambev from '../../assets/ambev.png'
-import siemens from '../../assets/siemens.png'
 import { useState, useEffect } from 'react';
 
 function CarouselProducts() {
@@ -24,6 +19,7 @@ function CarouselProducts() {
             .catch((err) => {
                 console.log(err);
                 alert('Erro ao buscar Empresas Parceiras!');
+                window.location.reload();
             })
     }, []);
 
