@@ -12,6 +12,7 @@ import image2 from "../../assets/image_38.png";
 
 //Importação de estilização
 import "./Assistencia.css";
+import WhatsApp from "../../components/WhatsApp/WhatsApp";
 
 export default function Assistencia() {
     //Script de Scroll de tela
@@ -34,7 +35,8 @@ export default function Assistencia() {
 
     return (
         <div>
-            <Header scrolled={scrolled} color="#101663" />
+            <WhatsApp scrolled={scrolled} />
+            <Header scrolled={scrolled} color="#101663" bgcolor={"#fff"} />
             <div className="Banner bg-white text-blue">
                 <img src={image1} alt="Imagem Banner Produtos" />
                 <div className="TituloBanner">
@@ -54,7 +56,6 @@ export default function Assistencia() {
                 <img src={image2} alt="Imagem do Produtos" />
             </div>
             <Footer bgcolor={"#101663"} color={"#FFF"} />
-            ai sim em
         </div>
     );
 }

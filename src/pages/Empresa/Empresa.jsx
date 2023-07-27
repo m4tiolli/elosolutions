@@ -7,6 +7,7 @@ import "./Empresa.css";
 //Importe de componentes
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Card from "../../components/Card/Card";
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 
 //Importação de imagens
@@ -15,6 +16,7 @@ import image2 from "../../assets/image_25.png";
 import image3 from "../../assets/image_26.png";
 import fundador1 from "../../assets/fundador1.png";
 import fundador2 from "../../assets/fundador2.png";
+import WhatsApp from './../../components/WhatsApp/WhatsApp';
 
 export default function Empresa() {
     //Mudança de tela com Arrow´s
@@ -63,6 +65,7 @@ export default function Empresa() {
 
     return (
         <div>
+            <WhatsApp scrolled={scrolled} />
             <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={"#101661"} />
             <div className="HeaderBanner" id="index">
                 <div className="infoBanner text-blue textoBanner">
@@ -183,7 +186,8 @@ export default function Empresa() {
                     color="#101663"
                     onClick={Fundadores}
                 />
-                <h1 className="texto-titulo text-blue">História</h1>
+
+                <Card />
             </div>
             <Footer bgcolor={"#101663"} color={"#FFF"} />
         </div>

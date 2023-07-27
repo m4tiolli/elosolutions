@@ -128,3 +128,18 @@
 .bg-red {
   background-color: var(--red);
 }
+
+@media only screen and (max-width: 800px) {
+  .SobreProduto1 {
+    flex-direction: column;
+  }
+  .SobreConteudo p {
+    width: 80vw;
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  .SobreProduto1 img {
+    width: 80%;
+    border-radius: 10px;
+  }
+}

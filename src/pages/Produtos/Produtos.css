@@ -9,7 +9,6 @@
   position: relative;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
 }
 
 .Banner img {
@@ -129,4 +128,43 @@
 
 .bg-red {
   background-color: var(--red);
+}
+
+@media only screen and (max-width: 800px) {
+  .Banner img {
+    width: 70% !important;
+    height: auto;
+  }
+  .Banner {
+    padding-top: 15vh;
+  }
+  .TituloBanner h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .TituloBanner p {
+    width: 300% !important;
+    text-align: center;
+  }
+  button {
+    width: 70vw !important;
+  }
+  .SobreProduto {
+    flex-direction: column-reverse;
+  }
+  .SobreProduto img {
+    width: 100% !important;
+    height: auto;
+  }
+  .SobreProduto p,
+  .SobreProduto2 p {
+    width: 80% !important;
+    text-align: center;
+  }
+  .SobreProduto2 {
+    flex-direction: column;
+  }
+  .CarouselEmpresas {
+    height: 60vh !important;
+  }
 }

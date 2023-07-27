@@ -12,19 +12,20 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 //Importe de Imagens
-import robo from "../../assets/robo.png";
+import robo from "../../assets/Robot.png";
 import index2 from "../../assets/index2.png";
 import index3 from "../../assets/index3.png";
 import IOT from "../../assets/IOT_Elo.png";
 import Inversor from "../../assets/Inversor.png";
 import Baixa from "../../assets/BaixaTensao.png";
-import Painel from "../../assets/Painel.png";
+import Painel from "../../assets/Alicate.png";
 import Suporte from "../../assets/eletricista-manutencao-eletrica.png";
 
 //Carrossel
 import CarouselProducts from "../../components/Carousel/Carousel";
 import CarouselMini from "../../components/CarouselMini/CarouselMini";
 import { Link, useNavigate } from "react-router-dom";
+import WhatsApp from "../../components/WhatsApp/WhatsApp";
 const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
@@ -69,8 +70,9 @@ function Home() {
 
   return (
     <div>
+      <WhatsApp scrolled={scrolled} />
       <div className="container index" id="index">
-        <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={"#fff"} />
+        <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={color} />
         <div id="carouselEmpresas">
           <CarouselMini />
         </div>
@@ -197,7 +199,7 @@ function Home() {
           <h2 className="title white">Serviços</h2>
           <div className="datacontainer descido">
             <h2 className="title subtitle white">Montagem de Painéis</h2>
-            <img src={Painel} alt="Montagem de Painel" className="image" />
+            <img src={Painel} alt="Montagem de Painel" className="imagesquare" />
             <div className="textbutton">
               <div className="align">
                 <p className="text1 white">
@@ -226,7 +228,7 @@ function Home() {
             <img
               src={Suporte}
               alt="Assistencia técnica 24 Horas"
-              className="image"
+              className="imagesquare"
               style={{ borderRadius: 10 }}
             />
             <div className="textbutton-reverse">

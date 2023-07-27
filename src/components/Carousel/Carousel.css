@@ -19,6 +19,7 @@
   font-family: var(--titlefont);
   color: #fff;
   margin: 1vh 0;
+  font-size: 100%;
 }
 
 .divimageproduct img {
@@ -33,5 +34,8 @@
   .divimageproduct img {
     width: 30vw;
     height: 30vw;
+  }
+  .titleimg {
+    font-size: 70%;
   }
 }

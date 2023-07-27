@@ -135,3 +135,10 @@
 .bg-red {
   background-color: var(--red);
 }
+
+@media only screen and (max-width: 800px) {
+  .SobreProduto_1 img {
+    width: 80% !important;
+    border-radius: 10px;
+  }
+}

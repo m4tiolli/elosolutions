@@ -11,6 +11,7 @@ import image2 from "../../assets/image_36.png";
 
 //Importação de estilização
 import "./Locacao.css";
+import WhatsApp from './../../components/WhatsApp/WhatsApp';
 
 export default function Locacao() {
     //Script de Scroll de tela
@@ -33,7 +34,8 @@ export default function Locacao() {
 
     return (
         <div>
-            <Header scrolled={scrolled} color="#101663" />
+            <WhatsApp scrolled={scrolled} />
+            <Header scrolled={scrolled} color="#101663" bgcolor={"#fff"} />
             <div className="Banner bg-white text-blue">
                 <img src={image1} alt="Imagem Banner Produtos" />
                 <div className="TituloBanner">
