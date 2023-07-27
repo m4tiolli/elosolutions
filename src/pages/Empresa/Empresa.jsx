@@ -191,7 +191,6 @@ export default function Empresa() {
                     color="#101663"
                     onClick={Fundadores}
                 />
-                <h1 className="text-white texto-titulo">História</h1>
                 <Card />
             </div>
             <Footer bgcolor={"#101663"} color={"#FFF"} />

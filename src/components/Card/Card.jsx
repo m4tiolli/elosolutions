@@ -47,7 +47,7 @@ export default function Card() {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 700,
         slidesToShow: responsive ? 1 : 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -102,22 +102,25 @@ export default function Card() {
 
 
     return (
-        <div className="carousel">
-            <Slider {...settings}>
-                {historia.map((historias, index) => (
-                    <div key={index} className="">
-                        <div className="Card">
-                            <h1 className="titleimg blue">{historias?.title}</h1>
-                            <div className="Context">
-                                <img src={historias?.imagem} alt="" className="imgproduct" />
-                                <p className="text blue">
-                                    {historias?.info}
-                                </p>
+        <>
+            <h1 className="text-blue texto-titulo">História</h1>
+            <div className="carousel">
+                <Slider {...settings}>
+                    {historia.map((historias, index) => (
+                        <div key={index} className="">
+                            <div className="Card">
+                                <h1 className="titleimg blue">{historias?.title}</h1>
+                                <div className="Context">
+                                    <img src={historias?.imagem} alt="" className="imgproduct" />
+                                    <p className="conteudo blue">
+                                        {historias?.info}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </Slider>
-        </div>
+                    ))}
+                </Slider>
+            </div>
+            </>
     );
 }
