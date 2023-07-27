@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/elosolutions/static/css/main.cdba6833.css",
-    "main.js": "/elosolutions/static/js/main.1a90ba79.js",
+    "main.js": "/elosolutions/static/js/main.c134a4a2.js",
     "static/js/787.320725aa.chunk.js": "/elosolutions/static/js/787.320725aa.chunk.js",
     "static/media/BannerHome.png": "/elosolutions/static/media/BannerHome.1f02934da1bee4b1a7ba.png",
     "static/media/eletricista-manutencao-eletrica.png": "/elosolutions/static/media/eletricista-manutencao-eletrica.f3c2773d0eab28560e17.png",
@@ -36,11 +36,11 @@
     "static/media/slick.woff": "/elosolutions/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/elosolutions/index.html",
     "main.cdba6833.css.map": "/elosolutions/static/css/main.cdba6833.css.map",
-    "main.1a90ba79.js.map": "/elosolutions/static/js/main.1a90ba79.js.map",
+    "main.c134a4a2.js.map": "/elosolutions/static/js/main.c134a4a2.js.map",
     "787.320725aa.chunk.js.map": "/elosolutions/static/js/787.320725aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cdba6833.css",
-    "static/js/main.1a90ba79.js"
+    "static/js/main.c134a4a2.js"
   ]
 }
