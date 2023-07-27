@@ -16,7 +16,7 @@ import image2 from "../../assets/image_25.png";
 import image3 from "../../assets/image_26.png";
 import fundador1 from "../../assets/fundador1.png";
 import fundador2 from "../../assets/fundador2.png";
-import WhatsApp from './../../components/WhatsApp/WhatsApp';
+import WhatsApp from "./../../components/WhatsApp/WhatsApp";
 
 export default function Empresa() {
     //Mudança de tela com Arrow´s
@@ -48,7 +48,7 @@ export default function Empresa() {
     const [scrolled, setScrolled] = useState(false);
 
     const [color, setColor] = useState("#101663");
-    const [bgcolor, setBgcolor] = useState("#fff")
+    const [bgcolor, setBgcolor] = useState("#fff");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -66,7 +66,12 @@ export default function Empresa() {
     return (
         <div>
             <WhatsApp scrolled={scrolled} />
-            <Header scrolled={scrolled} color={color} bgcolor={bgcolor} burger={"#101661"} />
+            <Header
+                scrolled={scrolled}
+                color={color}
+                bgcolor={bgcolor}
+                burger={"#101661"}
+            />
             <div className="HeaderBanner" id="index">
                 <div className="infoBanner text-blue textoBanner">
                     <img src={image1} alt="" />
@@ -186,7 +191,7 @@ export default function Empresa() {
                     color="#101663"
                     onClick={Fundadores}
                 />
-
+                <h1 className="text-white texto-titulo">História</h1>
                 <Card />
             </div>
             <Footer bgcolor={"#101663"} color={"#FFF"} />
