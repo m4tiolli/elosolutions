@@ -52,7 +52,7 @@ function CarouselMini() {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 700,
         slidesToShow: responsive ? 3 : 6,
         slidesToScroll: 1,
         autoplay: true,

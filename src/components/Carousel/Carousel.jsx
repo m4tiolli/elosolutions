@@ -42,7 +42,7 @@ function CarouselProducts() {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 700,
         slidesToShow: responsive ? 2 : 3,
         slidesToScroll: 1,
         autoplay: true,
