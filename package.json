@@ -1,7 +1,7 @@
 {
   "name": "elosolutions",
   "version": "0.1.0",
-  "homepage": "https://m4tiolli.github.io/elosolutions",
+  "homepage": "elosolutions",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -44,6 +44,7 @@
     "gh-pages": "^5.0.0",
     "react-icons": "^4.10.1",
     "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^6.14.2",
+    "@babel/plugin-proposal-private-property-in-object": "@latest"
   }
 }
