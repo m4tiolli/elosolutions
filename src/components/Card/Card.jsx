@@ -30,18 +30,18 @@ export default function Card() {
 
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch("https://localhost:7231/api/Parceiros", {
-            method: "GET",
-        })
-            .then((response) => response.json())
-            .then((json) => setProducts(json))
-            .catch((err) => {
-                console.log(err);
-                alert("Erro ao buscar Empresas Parceiras!");
-                window.location.reload();
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetch("https://localhost:7231/api/Parceiros", {
+    //         method: "GET",
+    //     })
+    //         .then((response) => response.json())
+    //         .then((json) => setProducts(json))
+    //         .catch((err) => {
+    //             console.log(err);
+    //             alert("Erro ao buscar Empresas Parceiras!");
+    //             window.location.reload();
+    //         });
+    // }, []);
 
     //Configurações de efeito slider
     const settings = {

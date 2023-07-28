@@ -21,17 +21,17 @@ function CarouselMini() {
     //Imagens vindas do banco de dados
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('https://localhost:7231/api/Clientes', {
-            method: 'GET',
-        })
-            .then((response) => response.json())
-            .then((json) => setProducts(json))
-            .catch((err) => {
-                console.log(err);
-                alert('Erro ao pegar Clientes');
-            })
-    }, []);
+    // useEffect(() => {
+    //     fetch('https://localhost:7231/api/Clientes', {
+    //         method: 'GET',
+    //     })
+    //         .then((response) => response.json())
+    //         .then((json) => setProducts(json))
+    //         .catch((err) => {
+    //             console.log(err);
+    //             alert('Erro ao pegar Clientes');
+    //         })
+    // }, []);
 
     const [responsive, setResponsive] = useState()
 
