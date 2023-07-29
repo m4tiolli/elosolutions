@@ -40,20 +40,6 @@ function Home() {
     AOS.init();
   }, []);
 
-  function produtos() {
-    window.location.href = "#produtos";
-  }
-  function servicos() {
-    window.location.href = "#servicos";
-  }
-  function industrias() {
-    window.location.href = "#casos-de-sucesso";
-  }
-
-  function empresa() {
-    window.location.href = "#empresas";
-  }
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
