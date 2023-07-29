@@ -1,13 +1,4 @@
-import {
-  HashRouter,
-  Route,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom"; // Importe o HashRouter
-// Remova a importação do RouterProvider e createBrowserRouter
-
+import { HashRouter, Route, Routes } from "react-router-dom";
 // Importações das páginas
 import Home from "./pages/Home/Home";
 import Empresa from "./pages/Empresa/Empresa";
