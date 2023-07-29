@@ -1,6 +1,6 @@
 import { BsChevronCompactUp } from "react-icons/bs";
 
-const ScrollUpButton = ({ targetId }) => {
+const ScrollUpButton = ({ targetId, color }) => {
   const scrollToNextSection = () => {
     const nextSection = document.getElementById(targetId);
     if (nextSection) {
@@ -11,7 +11,7 @@ const ScrollUpButton = ({ targetId }) => {
   return (
     <BsChevronCompactUp
       className="arrow up"
-      color="#101663"
+      color={color}
       onClick={scrollToNextSection}
     />
   );

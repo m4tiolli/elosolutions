@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 import { IoFlash } from "react-icons/io5";
 import AOS from "aos";
 
@@ -13,7 +12,6 @@ import Footer from "../../components/Footer/Footer";
 
 //Importe de Imagens
 import robo from "../../assets/Robot.png";
-import index2 from "../../assets/index2.png";
 import index3 from "../../assets/index3.png";
 import IOT from "../../assets/IOT_Elo.png";
 import Inversor from "../../assets/Inversor.png";
@@ -24,11 +22,10 @@ import Suporte from "../../assets/eletricista-manutencao-eletrica.png";
 //Carrossel
 import CarouselProducts from "../../components/Carousel/Carousel";
 import CarouselMini from "../../components/CarouselMini/CarouselMini";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import WhatsApp from "../../components/WhatsApp/WhatsApp";
 import ScrollDownButton from "../../components/ScrollDownButton/ScrollDownButton";
 import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButon";
-const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
 
@@ -74,13 +71,11 @@ function Home() {
           </div>
           <img src={robo} alt="" className="robo" />
         </div>
-        <div className="center">
-          <ScrollDownButton targetId={"produtos"} />
-        </div>
+        <ScrollDownButton targetId={"produtos"} color={"#fff"} />
       </div>
       <div className="wrapper">
         <div className="container" id="produtos">
-          <ScrollUpButton targetId={"index"} />
+          <ScrollUpButton targetId={"index"} color={"#101663"} />
           <h2 className="title">Produtos</h2>
           <div className="datacontainer descido">
             <h2 className="subtitle">I.O.T</h2>
@@ -151,9 +146,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="center">
-            <ScrollDownButton targetId={"servicos"} />
-          </div>
+          <ScrollDownButton targetId={"servicos"} color={"#101663"} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
@@ -167,7 +160,7 @@ function Home() {
       </div>
       <div className="wrapper">
         <div className="container bgblue" id="servicos">
-          <ScrollUpButton targetId={"produtos"} />
+          <ScrollUpButton targetId={"produtos"} color={"#101663"} />
           <h2 className="title white">Serviços</h2>
           <div className="datacontainer descido">
             <h2 className="title subtitle white">Montagem de Painéis</h2>
@@ -242,7 +235,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <ScrollDownButton targetId={"casos-de-sucesso"} />
+          <ScrollDownButton targetId={"casos-de-sucesso"} color={"#101663"} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
@@ -255,7 +248,7 @@ function Home() {
         </div>
       </div>
       <div className="container inline" id="casos-de-sucesso">
-        <ScrollUpButton targetId={"servicos"} />
+        <ScrollUpButton targetId={"servicos"} color={"#101663"} />
         <div className="industrias">
           <IoFlash className="flash" />
           <h2 className="titleindustrias blue">Indústria Sucroalcooleira</h2>
@@ -288,7 +281,7 @@ function Home() {
         </svg>
       </div>
       <div className="container bgblue lightheight" id="empresas">
-        <ScrollUpButton targetId={"empresas"} />
+        <ScrollUpButton targetId={"empresas"} color={"#fff"} />
         <h2 className="title white">Empresas Parceiras</h2>
         <CarouselProducts />
       </div>

@@ -103,7 +103,7 @@
     width: 80% !important;
   }
   .t20 {
-    top: 7vh !important;
+    top: 3vh !important;
   }
   .mapa {
     width: 80% !important;
@@ -112,6 +112,9 @@
   .texto-subtitulo {
     width: 80%;
     text-align: center;
+  }
+  .texto-titulo {
+    text-align: center !important;
   }
   .titlediv {
     gap: 0;
