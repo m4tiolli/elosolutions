@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import CarouselProducts from "../../components/Carousel/Carousel";
-import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 
 //Importe de imagens
 import image1 from "../../assets/image_27.png";
@@ -19,13 +18,10 @@ export default function Produtos() {
     //Script de Scroll de tela
     const [scrolled, setScrolled] = useState(false);
 
-    const [color, setColor] = useState("#fff");
-
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 100;
             setScrolled(isScrolled);
-            isScrolled ? setColor("#101663") : setColor("#fff");
         };
 
         window.addEventListener("scroll", handleScroll);
