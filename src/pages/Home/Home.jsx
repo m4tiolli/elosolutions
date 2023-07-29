@@ -26,6 +26,8 @@ import CarouselProducts from "../../components/Carousel/Carousel";
 import CarouselMini from "../../components/CarouselMini/CarouselMini";
 import { Link, useNavigate } from "react-router-dom";
 import WhatsApp from "../../components/WhatsApp/WhatsApp";
+import ScrollDownButton from "../../components/ScrollDownButton/ScrollDownButton";
+import ScrollUpButton from "../../components/ScrollUpButton/ScrollUpButon";
 const images = [IOT, Inversor, Baixa, Painel, index2, index3];
 
 function Home() {
@@ -87,20 +89,12 @@ function Home() {
           <img src={robo} alt="" className="robo" />
         </div>
         <div className="center">
-          <BsChevronCompactDown
-            className="arrow down"
-            color="#fff"
-            onClick={produtos}
-          />
+          <ScrollDownButton targetId={"produtos"} />
         </div>
       </div>
       <div className="wrapper">
         <div className="container" id="produtos">
-          <BsChevronCompactUp
-            className="arrow up"
-            color="#101663"
-            onClick={() => (window.location.href = "#index")}
-          />
+          <ScrollUpButton targetId={"index"} />
           <h2 className="title">Produtos</h2>
           <div className="datacontainer descido">
             <h2 className="subtitle">I.O.T</h2>
@@ -172,11 +166,7 @@ function Home() {
             </div>
           </div>
           <div className="center">
-            <BsChevronCompactDown
-              className="arrow down"
-              color="#101663"
-              onClick={servicos}
-            />
+            <ScrollDownButton targetId={"servicos"} />
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -191,11 +181,7 @@ function Home() {
       </div>
       <div className="wrapper">
         <div className="container bgblue" id="servicos">
-          <BsChevronCompactUp
-            className="arrow up"
-            color="#fff"
-            onClick={produtos}
-          />
+          <ScrollUpButton targetId={"produtos"} />
           <h2 className="title white">Serviços</h2>
           <div className="datacontainer descido">
             <h2 className="title subtitle white">Montagem de Painéis</h2>
@@ -270,11 +256,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <BsChevronCompactDown
-            className="arrow down"
-            color="#fff"
-            onClick={industrias}
-          />
+          <ScrollDownButton targetId={"casos-de-sucesso"} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
@@ -287,11 +269,7 @@ function Home() {
         </div>
       </div>
       <div className="container inline" id="casos-de-sucesso">
-        <BsChevronCompactUp
-          className="arrow up"
-          color="#101663"
-          onClick={servicos}
-        />
+        <ScrollUpButton targetId={"servicos"} />
         <div className="industrias">
           <IoFlash className="flash" />
           <h2 className="titleindustrias blue">Indústria Sucroalcooleira</h2>
@@ -311,11 +289,7 @@ function Home() {
           </p>
         </div>
         <div className="center" >
-          <BsChevronCompactDown
-            className="arrow down"
-            color="#101663"
-            onClick={empresa}
-          />
+          <ScrollDownButton targetId={"empresas"} />
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -328,11 +302,7 @@ function Home() {
         </svg>
       </div>
       <div className="container bgblue lightheight" id="empresas">
-        <BsChevronCompactUp
-          className="arrow up"
-          color="#fff"
-          onClick={industrias}
-        />
+        <ScrollUpButton targetId={"empresas"} />
         <h2 className="title white">Empresas Parceiras</h2>
         <CarouselProducts />
       </div>
